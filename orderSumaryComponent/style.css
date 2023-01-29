@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue-pale: hsl(225, 100%, 94%);
+  --color-blue-pale-opacity: hsla(225, 100%, 94%, 0.3);
+  --color-blue-bright: hsl(245, 75%, 52%);
+  --color-blue-bright-opacity: hsl(245, 75%, 52%, 0.19);
+  --color-blue-bright-light: #766cf1;
+
+  --color-very-blue-pale: hsl(225, 100%, 98%);
+  --color-blue-desaturated: hsl(224, 23%, 55%);
+  --color-blue-dark: hsl(223, 47%, 23%);
+
+  --font-family: "Red Hat Display", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: var(--color-blue-pale);
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 120% 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  width: 39rem;
+  height: 59.6rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 22rem 4rem 1rem 4rem;
+
+  background-color: #ffffff;
+  background-image: url(./images/illustration-hero.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 18rem;
+
+  border-radius: 1.8rem;
+}
+
+.card__description {
+  font-size: 1.4rem;
+  color: var(--color-blue-desaturated);
+  line-height: 1.5;
+}
+
+.card__plan {
+  width: 100%;
+  padding: 2.3rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-blue-pale-opacity);
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.icon__music {
+  width: 4.1rem;
+}
+.plan__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  text-align: left;
+  gap: 0.5rem;
+}
+
+.plan__title {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.plan__price {
+  font-size: 1.4rem;
+  color: var(--color-blue-desaturated);
+}
+.plan__link {
+  flex-grow: 2;
+  text-align: right;
+  font-size: 1.23rem;
+  text-decoration: underline;
+  color: var(--color-blue-bright);
+  font-weight: 700;
+  transition: .3s ease-in-out;
+
+}
+
+.plan__link:hover {
+  text-decoration: none;
+  color: var(--color-blue-bright-light);
+}
+
+.card__buttons {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.card__button {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: .3s ease-in-out;
+}
+
+.card__button--proceed {
+  background-color: var(--color-blue-bright);
+  color: var(--color-very-blue-pale);
+  box-shadow: 0 1.5rem 1rem var(--color-blue-bright-opacity);
+}
+
+.card__button--proceed:hover {
+  background-color: var(--color-blue-bright-light);
+}
+
+.card__button--cancel {
+  color: var(--color-blue-desaturated);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
